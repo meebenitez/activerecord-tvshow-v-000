@@ -23,7 +23,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.popular_shows
-    Show.all.collect {|s| s.rating > 5 }
+    Show.all.select {|s| s.rating > 5 }
   end
-  
+
 end
