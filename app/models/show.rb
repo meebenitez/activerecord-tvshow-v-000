@@ -24,6 +24,7 @@ class Show < ActiveRecord::Base
 
   def self.popular_shows
     Show.all.select {|s| s.rating > 5 }
+    binding.pry
   end
 
 end
